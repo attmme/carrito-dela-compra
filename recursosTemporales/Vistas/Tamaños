@@ -1,0 +1,17 @@
+Header y main -> Width fijado, no tocar en el código
+-------------
+Extra small     .col-xs		    Width < 768px
+Small           .col-sm	        Width >= 768px y Width < 992px
+Medium	        .col-md	        Width >=992px y Width < 1200px
+Large           .col-lg         Width > 1200px
+
+
+Header y main -> Decidir en cada vista lo que sea más oportuno, limitar si se cree necesario
+-------------
+Extra small     .col-xs		    Heigth ?
+Small           .col-sm	        Heigth ?
+Medium	        .col-md	        Heigth ?
+Large           .col-lg         Heigth ?
+
+
+

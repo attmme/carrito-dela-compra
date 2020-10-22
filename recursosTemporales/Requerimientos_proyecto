@@ -1,0 +1,9 @@
+Usaremos un normalizador para evitar diferencias entre estilos de navegadores. Su CDN es: https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.cs
+
+Usa al menos tres eventos onclick
+
+Usa al menos un getElementById
+
+Usa al menos una vez getElementsByTagName
+
+Usa al menos una vez getElementsByClassName

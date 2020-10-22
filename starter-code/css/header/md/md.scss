@@ -1,0 +1,13 @@
+/* Medium -> Width >=992px y Width < 1200px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    header {
+        // CODIGO A PARTIR DE AQUI
+
+        /* Contenido visual solo para tener una referencia, se tiene que borrar */
+        width: 100%;
+        height: auto;
+        background-color: yellow;
+
+        // CODIGO HASTA AQUI
+    }
+}

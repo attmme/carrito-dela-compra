@@ -1,0 +1,13 @@
+/* Large -> Width > 1200px */
+@media (min-width: 1200px) {
+    header {
+        // CODIGO A PARTIR DE AQUI
+
+        /* Contenido visual solo para tener una referencia, se tiene que borrar */
+        width: 100%;
+        height: auto;
+        background-color: orange;
+
+        // CODIGO HASTA AQUI
+    }
+}

@@ -1,0 +1,14 @@
+/* Extra -> small (Width < 768px) */
+@media (max-width: 767px) {
+  header {
+    // CODIGO A PARTIR DE AQUI
+
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 100%;
+
+    height: auto;
+    background-color: red;
+
+    // CODIGO HASTA AQUI
+  }
+}

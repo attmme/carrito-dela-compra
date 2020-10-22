@@ -1,0 +1,13 @@
+/* Extra -> small (Width < 768px) */
+@media (max-width: 767px) {
+  main {
+    // CODIGO A PARTIR DE AQUI
+
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 767px;
+    height: 800px;
+    background-color: grey;
+
+    // CODIGO HASTA AQUI
+  }
+}
