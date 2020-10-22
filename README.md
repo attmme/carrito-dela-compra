@@ -1,3 +1,10 @@
+# GRUPO
+| Grupo |
+| ------------- |
+| Oscar Gómez  |
+| Jordi Enrique  |
+| Osama  |
+
 # DOM | The Shopping Cart
 
 ## Introducción
