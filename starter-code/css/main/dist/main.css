@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* Extra -> small (Width < 768px) */
+@media (max-width: 767px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 767px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Small -> Width >= 768px y Width < 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 768px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Medium -> Width >=992px y Width < 1200px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 992px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Large -> Width > 1200px */
+@media (min-width: 1200px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 1200px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Estilos generales que afecten a todos los tamaños por igual */

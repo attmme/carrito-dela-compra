@@ -1,0 +1,9 @@
+/* Small -> Width >= 768px y Width < 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 100%;
+    height: auto;
+    background-color: blue;
+  }
+}

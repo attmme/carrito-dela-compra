@@ -1,0 +1,9 @@
+/* Small -> Width >= 768px y Width < 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 768px;
+    height: 800px;
+    background-color: grey;
+  }
+}

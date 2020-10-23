@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*
+
+NO TOCAR ESTE FICHERO, AVISAD ANTES
+
+*/
+/* Extra -> small (Width < 768px) */
+@media (max-width: 767px) {
+  header {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 100%;
+    height: auto;
+    background-color: red;
+  }
+}
+/* Small -> Width >= 768px y Width < 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 100%;
+    height: auto;
+    background-color: blue;
+  }
+}
+/* Medium -> Width >=992px y Width < 1200px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 100%;
+    height: auto;
+    background-color: yellow;
+  }
+}
+/* Large -> Width > 1200px */
+@media (min-width: 1200px) {
+  header {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 100%;
+    height: auto;
+    background-color: orange;
+  }
+}
+/* Estilos generales que afecten a todos los tamaños por igual */
+header {
+  width: 100%;
+  height: auto;
+}
+
+/* Extra -> small (Width < 768px) */
+@media (max-width: 767px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 767px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Small -> Width >= 768px y Width < 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 768px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Medium -> Width >=992px y Width < 1200px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 992px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Large -> Width > 1200px */
+@media (min-width: 1200px) {
+  main {
+    /* Contenido visual solo para tener una referencia, se tiene que borrar */
+    width: 1200px;
+    height: 800px;
+    background-color: grey;
+  }
+}
+/* Estilos generales que afecten a todos los tamaños por igual */
+html {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+/*  Estilos que ya venian, revisar que nos sirve
+    borrar al terminar la web
+
+input {
+  border: solid 1px black;
+}
+
+.container {
+
+}
+
+.info-container {
+
+}
+
+.item {
+
+}
+
+.row {
+
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-delete {
+    color: #fff;
+    background-color: #CF000F;
+    border-color: #CF000F;
+}
+
+.quantity {
+  margin: 0 5px;
+}
+ */
