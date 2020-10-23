@@ -1,9 +1,11 @@
+import * as general from './script.js';
 const myRequest = new Request('../data/products.json');
 
 
 var g_dataObjects ;
 window.onload = function () {
-
+    console.log("2");
+    general.hello();
         loadData();
         
 }

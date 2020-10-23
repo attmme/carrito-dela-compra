@@ -1,4 +1,3 @@
-const myRequest = new Request('../data/products.json');
 
 
 var g_dataObjects ;
