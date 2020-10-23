@@ -8,6 +8,7 @@ window.onload = function () {
                 
 }
 
+
 function loadData() {
         fetch(myRequest)
         .then(response => response.json())

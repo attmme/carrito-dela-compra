@@ -1,5 +1,5 @@
 
-
+/*
 var g_dataObjects ;
 window.onload = function () {
 
@@ -14,4 +14,4 @@ function loadData() {
                 console.log(l_data)
                 g_dataObjects = l_data;
         });
-}
+}*/
