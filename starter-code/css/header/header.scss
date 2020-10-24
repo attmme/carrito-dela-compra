@@ -7,7 +7,7 @@ header {
     nav {
         display: flex;
 
-        // Lista con los botoes para cambiar de vista
+        // Lista con los botones para cambiar de vista
         li {
             display: flex;
             justify-content: space-around;
@@ -28,7 +28,8 @@ header {
                     &:hover {
                         color: $bgButtColor;
                         background-color: $colButt;
-                    }
+                    }                   
+                 
                 }
 
             }
@@ -48,4 +49,10 @@ header {
             height: 100px;
         }
     }
+}
+
+// Cambio del color de fondo cuando se ha apretado un botón
+.apretado {
+    color: $colButt;
+    background-color: #0086bd;
 }

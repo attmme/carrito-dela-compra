@@ -1,7 +1,27 @@
-@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss';
+//@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss';
 
 /* Estilos generales que afecten a todos los tamaños por igual */
 
-body {
-    
+main {
+    background-color: $bgColMain;
+    display: flex;
+    justify-content: center;
+
+    #vendedor {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+    #comprador {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+
+    #manager {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
 }

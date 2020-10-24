@@ -1,19 +1,18 @@
+/* Recoger contenido json (?) */
 const myRequest = new Request('../data/products.json');
-
 
 var g_dataObjects ;
 window.onload = function () {
-        console.log("1");
+        //console.log("1");
         loadData();
                 
 }
-
 
 function loadData() {
         fetch(myRequest)
         .then(response => response.json())
         .then(l_data => {
-                console.log(l_data[0])
+                //console.log(l_data[0])
                 g_dataObjects = l_data;
         });
 }
@@ -22,6 +21,7 @@ function loadData() {
 export function hello() {
         console.log("hello");
 }
+
 /* CREAR PRODUCTO -> Ver que hacer con el fichero json que ya hay productos
 
 Función encargada de crear cada uno de los productos, se recibe por parámetros el Nombre, Precio y cantidad en Stock.
