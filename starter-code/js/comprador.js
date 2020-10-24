@@ -13,3 +13,8 @@ function loadData() {
                 g_dataObjects = l_data;
         });
 }
+
+
+function addRowDom(){
+
+}

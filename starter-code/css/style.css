@@ -64,14 +64,9 @@ header {
     background-color: grey;
   }
 }
-/* Medium -> Width >=992px y Width < 1200px */
-@media (min-width: 992px) and (max-width: 1199px) {
-  main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 992px;
-    height: 800px;
-    background-color: grey;
-  }
+main #comprador {
+  width: 100%;
+  border: solid;
 }
 /* Large -> Width > 1200px */
 @media (min-width: 1200px) {
