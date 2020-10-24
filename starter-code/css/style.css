@@ -5,58 +5,53 @@ NO TOCAR ESTE FICHERO, AVISAD ANTES
 
 */
 /* Extra -> small (Width < 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
+    width: 500px;
     height: auto;
     background-color: red;
   }
 }
 /* Small -> Width >= 768px y Width < 992px */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
+    width: 768px;
     height: auto;
-    background-color: blue;
+    background-color: red;
   }
 }
 /* Medium -> Width >=992px y Width < 1200px */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
+    width: 992px;
     height: auto;
-    background-color: yellow;
+    background-color: red;
   }
 }
 /* Large -> Width > 1200px */
 @media (min-width: 1200px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
+    width: 1200px;
     height: auto;
-    background-color: orange;
+    background-color: red;
   }
 }
 /* Estilos generales que afecten a todos los tamaños por igual */
-header {
-  width: 100%;
-  height: auto;
-}
-
 /* Extra -> small (Width < 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 767px;
+    width: 500px;
     height: 800px;
     background-color: grey;
   }
 }
 /* Small -> Width >= 768px y Width < 992px */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   main {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: 768px;
@@ -65,7 +60,7 @@ header {
   }
 }
 /* Medium -> Width >=992px y Width < 1200px */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   main {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: 992px;
@@ -151,3 +146,5 @@ input {
   margin: 0 5px;
 }
  */
+
+/*# sourceMappingURL=style.css.map */

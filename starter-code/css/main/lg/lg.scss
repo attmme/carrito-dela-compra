@@ -1,12 +1,14 @@
+@import '../../general/colors', '../../general/sizes';
+
 /* Large -> Width > 1200px */
-@media (min-width: 1200px) {
+@media (min-width: $maxWidthMD) {
     main {
         // CODIGO A PARTIR DE AQUI
 
         /* Contenido visual solo para tener una referencia, se tiene que borrar */
-        width: 1200px;
-        height: 800px;
-        background-color: grey;
+        width: $maxWidthMD;
+        height: $heigthMain;
+        background-color: $bgColMain;
 
         // CODIGO HASTA AQUI
     }

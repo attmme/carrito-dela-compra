@@ -1,13 +1,15 @@
+@import '../../general/colors', '../../general/sizes';
+
 /* Extra -> small (Width < 768px) */
-@media (max-width: 767px) {
+@media (max-width: $maxWidthXS) {
   header {
     // CODIGO A PARTIR DE AQUI
 
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
+    width: $widthXS;
 
-    height: auto;
-    background-color: red;
+    height: $heigthHeader;
+    background-color: $bgColHeader;
 
     // CODIGO HASTA AQUI
   }
