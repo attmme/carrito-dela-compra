@@ -1,10 +1,16 @@
 // Color de fondo html
 $bgColHtml: #F8F8F8;
 
+/* Colores del header */
 
-// Color de fondo header -> CAMBIAR
-$bgColHeader: red;
+$bgColHeader: #364765; // Fondo header
+
+$bgButtColor: $bgColHeader; // Color fondo botón
+$bgButtHover: #F8F8F8;// Color fondo botón en hover
+$colButt: #F8F8F8; // Color del texto del botón
+$colButtHover: #F8F8F8;// Color del texto del botón en hover
 
 
+/* Colores del main */
 // Color de fondo main -> CAMBIAR
-$bgColMain: grey;
+$bgColMain: #f2f2f2;

@@ -4,4 +4,48 @@
 
 header {
 
+    nav {
+        display: flex;
+
+        // Lista con los botoes para cambiar de vista
+        li {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            list-style-type: none;
+            width: 100%;
+            margin-bottom: 10px;
+
+            ul {
+                button {
+                    width: 120px;
+                    height: 50px;
+                    border: solid 2px;
+                    border-radius: 1px;
+                    color: $colButt;
+                    background-color: $bgButtColor;
+
+                    &:hover {
+                        color: $bgButtColor;
+                        background-color: $colButt;
+                    }
+                }
+
+            }
+        }
+
+        // Imagen del logo
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            height: 120px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
