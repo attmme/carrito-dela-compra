@@ -3,12 +3,13 @@
 NO TOCAR ESTE FICHERO, AVISAD ANTES
 
 */
-@import 'header/header.scss', 'main/main.scss';
+@import 'general/reset.scss', 'header/header.scss', 'main/main.scss';
+@import 'general/colors';
 
 html {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: $bgColHtml;
 }
 
 
@@ -18,22 +19,6 @@ html {
 
 input {
   border: solid 1px black;
-}
-
-.container {
-
-}
-
-.info-container {
-
-}
-
-.item {
-
-}
-
-.row {
-
 }
 
 

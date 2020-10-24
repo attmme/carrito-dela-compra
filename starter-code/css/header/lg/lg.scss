@@ -1,12 +1,14 @@
+@import '../../general/colors', '../../general/sizes';
+
 /* Large -> Width > 1200px */
-@media (min-width: 1200px) {
+@media (min-width: $maxWidthMD) {
     header {
         // CODIGO A PARTIR DE AQUI
 
         /* Contenido visual solo para tener una referencia, se tiene que borrar */
-        width: 100%;
-        height: auto;
-        background-color: orange;
+        width: $maxWidthMD;
+        height: $heigthHeader;
+        background-color: $bgColHeader;
 
         // CODIGO HASTA AQUI
     }

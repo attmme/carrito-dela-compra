@@ -1,4 +1,4 @@
-@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss';
+//@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss';
 
 /* Estilos generales que afecten a todos los tamaños por igual */
 
@@ -15,7 +15,6 @@ main {
 
     #comprador {
         width: 100%;
-        border: solid;
     }
 
     #manager {
