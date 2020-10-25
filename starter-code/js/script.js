@@ -18,9 +18,7 @@ function loadData() {
 }
 
 
-export function hello() {
-        console.log("hello");
-}
+
 export function getElementByid(id) {
         return document.getElementById(id);
         
