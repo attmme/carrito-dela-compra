@@ -1,4 +1,4 @@
-@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss';
+@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss', '../general/fonts';
 
 /* Estilos generales que afecten a todos los tamaños por igual */
 
@@ -6,6 +6,23 @@ main {
     background-color: $bgColMain;
     display: flex;
     justify-content: center;
+
+    li {
+        list-style-type: none;
+    }
+
+    // Añadir en el js
+    .btn-borrar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: 0px;
+        background-color: $delBtnColor;
+        color: $bgColHtml;
+    }
 
     #vendedor {
         width: 100px;
@@ -15,6 +32,62 @@ main {
 
     #comprador {
         width: 100%;
+        font-weight: bold;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 4.2%;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1%;
+
+            li {
+                display: flex;
+                justify-content: flex-start;
+                width: 25%;
+            }
+        }
+
+        #tableComprador {
+            width: 100%;
+
+            ul {
+                li {
+                    width: 25%;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    input {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        // Caja botones inferiores
+        #btnBox {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 100px;
+
+            button {
+                border: 0px;
+                width: 180px;
+                height: 40px;
+                border-radius: 2px;
+                font-weight: bold;
+                background-color: $infBtnColor;
+                
+                &:hover {
+                    background-color: $infBtnHover;
+
+                }
+            }
+        }
     }
 
     #manager {
