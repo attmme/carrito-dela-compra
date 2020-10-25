@@ -94,12 +94,6 @@ function addRowDom(obj) {
         li2.appendChild(p2);
         ul.appendChild(li2);
 
-        let li3 = document.createElement("li");
-        let p3 = document.createElement("p");
-        p3.appendChild(createTextNode("QTY"));
-
-        li3.appendChild(p3);
-        ul.appendChild(li3);
 
         let li4 = document.createElement("li");
         let input4 = document.createElement("input");
