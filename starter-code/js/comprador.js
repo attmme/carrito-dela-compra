@@ -12,10 +12,10 @@ function createTextNode(text){
 function addQuestionRowDom(){
         let data = general.g_dataObjects
         let table = general.getElementByid("tableComprador");
-        let tr = document.createElement("tr");
+        let ul = document.createElement("ul");
 
 
-        let td1 = document.createElement("td");
+        let li = document.createElement("td");
         let select1 = document.createElement("select");
         select1.addEventListener("change",function() {
                 selectProduct(this);
@@ -34,11 +34,11 @@ function addQuestionRowDom(){
                 select1.appendChild(option1);
         }
 
-        td1.appendChild(select1);
-        tr.appendChild(td1);
+        li.appendChild(select1);
+        ul.appendChild(li);
       
 
-        table.appendChild(tr);
+        table.appendChild(ul);
         addproductButton.disabled = true;
 
 }
@@ -55,55 +55,55 @@ function selectProduct(params) {
 
 function addRowDom(obj){
         let table = general.getElementByid("tableComprador");
-        let tr = document.createElement("tr");
+        let ul = document.createElement("ul");
 
 
-        let td1 = document.createElement("td"); 
+        let li1 = document.createElement("td"); 
         let p1 = document.createElement("p");
         p1.appendChild(createTextNode(obj.name));
         
-        td1.appendChild(p1);
-        tr.appendChild(td1);
+        li1.appendChild(p1);
+        ul.appendChild(li1);
 
 
-        let td2 = document.createElement("td"); 
+        let li2 = document.createElement("td"); 
         let p2 = document.createElement("p"); 
         p2.appendChild(createTextNode(obj.price));
 
-        td2.appendChild(p2);
-        tr.appendChild(td2);
+        li2.appendChild(p2);
+        ul.appendChild(li2);
 
-        let td3 = document.createElement("td"); 
+        let li3 = document.createElement("td"); 
         let p3 = document.createElement("p"); 
         p3.appendChild(createTextNode("QTY"));
 
-        td3.appendChild(p3);
-        tr.appendChild(td3);
+        li3.appendChild(p3);
+        ul.appendChild(li3);
 
-        let td4 = document.createElement("td"); 
+        let li4 = document.createElement("td"); 
         let input4 = document.createElement("input"); 
+        input4.setAttribute("type", "number");
+        li4.appendChild(input4);
+        ul.appendChild(li4);
 
-        td4.appendChild(input4);
-        tr.appendChild(td4);
-
-        let td5 = document.createElement("td"); 
+        let li5 = document.createElement("td"); 
         let p5 = document.createElement("p");
         p5.appendChild(createTextNode("$0.00"));
 
-        td5.appendChild(p5);
-        tr.appendChild(td5);
+        li5.appendChild(p5);
+        ul.appendChild(li5);
 
-        let td6 = document.createElement("td"); 
+        let li6 = document.createElement("td"); 
         let button6 = document.createElement("button");
         button6.appendChild(createTextNode("Delete"));
         button6.addEventListener("click",function() {
                 deleteRow(this);
         })
-        td6.appendChild(button6);
-        tr.appendChild(td6);
+        li6.appendChild(button6);
+        ul.appendChild(li6);
 
 
-        table.appendChild(tr);
+        table.appendChild(ul);
 
 
 }
