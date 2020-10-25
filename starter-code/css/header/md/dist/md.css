@@ -1,9 +1,11 @@
+/* Colores del header */
+/* Colores del main */
 /* Medium -> Width >=992px y Width < 1200px */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
-    height: auto;
-    background-color: yellow;
+    width: 992px;
+    height: 120px;
+    background-color: #364765;
   }
 }

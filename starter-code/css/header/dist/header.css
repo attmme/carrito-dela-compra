@@ -1,42 +1,85 @@
 @charset "UTF-8";
+/* Colores del header */
+/* Colores del main */
 /* Extra -> small (Width < 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
-    height: auto;
-    background-color: red;
+    width: 500px;
+    height: 120px;
+    background-color: #364765;
   }
 }
+/* Colores del header */
+/* Colores del main */
 /* Small -> Width >= 768px y Width < 992px */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
-    height: auto;
-    background-color: blue;
+    width: 768px;
+    height: 120px;
+    background-color: #364765;
   }
 }
+/* Colores del header */
+/* Colores del main */
 /* Medium -> Width >=992px y Width < 1200px */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
-    height: auto;
-    background-color: yellow;
+    width: 992px;
+    height: 120px;
+    background-color: #364765;
   }
 }
+/* Colores del header */
+/* Colores del main */
 /* Large -> Width > 1200px */
 @media (min-width: 1200px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
-    height: auto;
-    background-color: orange;
+    width: 1200px;
+    height: 120px;
+    background-color: #364765;
   }
 }
 /* Estilos generales que afecten a todos los tamaños por igual */
-header {
+header nav {
+  display: flex;
+}
+header nav li {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  list-style-type: none;
   width: 100%;
-  height: auto;
+  margin-bottom: 10px;
+}
+header nav li ul button {
+  width: 120px;
+  height: 50px;
+  border: solid 2px;
+  border-radius: 1px;
+  color: #F8F8F8;
+  background-color: #364765;
+}
+header nav li ul button:hover {
+  color: #364765;
+  background-color: #F8F8F8;
+}
+header nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 120px;
+}
+header nav img {
+  width: 100px;
+  height: 100px;
+}
+
+.apretado {
+  color: #F8F8F8;
+  background-color: #0086bd;
 }
