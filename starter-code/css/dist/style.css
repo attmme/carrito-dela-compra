@@ -143,50 +143,6 @@ header nav img {
   background-color: #0086bd;
 }
 
-/* Colores del header */
-/* Colores del main */
-/* Extra -> small (Width < 768px) */
-@media (max-width: 768px) {
-  main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 500px;
-    height: 800px;
-    background-color: #F5F5F5;
-  }
-}
-/* Colores del header */
-/* Colores del main */
-/* Small -> Width >= 768px y Width < 992px */
-@media (min-width: 768px) and (max-width: 992px) {
-  main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 768px;
-    height: 800px;
-    background-color: #F5F5F5;
-  }
-}
-/* Colores del header */
-/* Colores del main */
-/* Medium -> Width >=992px y Width < 1200px */
-@media (min-width: 992px) and (max-width: 1200px) {
-  main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 992px;
-    height: 800px;
-    background-color: #F5F5F5;
-  }
-}
-/* Colores del header */
-/* Colores del main */
-/* Large -> Width > 1200px */
-@media (min-width: 1200px) {
-  main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 1200px;
-    height: 800px;
-    background-color: #F5F5F5;
-  }
-}
 /* Estilos generales que afecten a todos los tamaños por igual */
 main {
   background-color: #F5F5F5;
@@ -261,5 +217,3 @@ input {
   margin: 0 5px;
 }
  */
-
-/*# sourceMappingURL=style.css.map */

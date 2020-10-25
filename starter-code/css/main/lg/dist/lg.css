@@ -1,9 +1,11 @@
+/* Colores del header */
+/* Colores del main */
 /* Large -> Width > 1200px */
 @media (min-width: 1200px) {
   main {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: 1200px;
     height: 800px;
-    background-color: grey;
+    background-color: #F5F5F5;
   }
 }

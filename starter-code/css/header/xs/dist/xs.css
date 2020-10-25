@@ -1,9 +1,11 @@
+/* Colores del header */
+/* Colores del main */
 /* Extra -> small (Width < 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
     /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 100%;
-    height: auto;
-    background-color: red;
+    width: 500px;
+    height: 120px;
+    background-color: #364765;
   }
 }
