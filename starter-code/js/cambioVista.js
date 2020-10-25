@@ -10,6 +10,7 @@ let boxComprador = document.getElementById('comprador');
 let boxManager = document.getElementById('manager');
 let boxesHeader = [boxVendedor, boxComprador, boxManager];
 
+console.log("hello1");
 
 /* Cambio de vista */
 btnVendedor.addEventListener('click', () => {
