@@ -106,7 +106,7 @@ table {
 header nav {
   display: flex;
 }
-header nav li {
+header nav ul {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -114,15 +114,16 @@ header nav li {
   width: 100%;
   margin-bottom: 10px;
 }
-header nav li ul button {
+header nav ul li button {
   width: 120px;
   height: 50px;
   border: solid 2px;
   border-radius: 1px;
   color: #F8F8F8;
   background-color: #364765;
+  font-weight: bold;
 }
-header nav li ul button:hover {
+header nav ul li button:hover {
   color: #364765;
   background-color: #F8F8F8;
 }
@@ -148,10 +149,12 @@ header nav img {
 /* Extra -> small (Width < 768px) */
 @media (max-width: 768px) {
   main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: 500px;
     height: 800px;
-    background-color: #F5F5F5;
+    background-color: #F3F3F3;
+  }
+  main .btn-borrar {
+    width: 130px;
   }
 }
 /* Colores del header */
@@ -159,10 +162,12 @@ header nav img {
 /* Small -> Width >= 768px y Width < 992px */
 @media (min-width: 768px) and (max-width: 992px) {
   main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: 768px;
     height: 800px;
-    background-color: #F5F5F5;
+    background-color: #F3F3F3;
+  }
+  main .btn-borrar {
+    width: 100px;
   }
 }
 /* Colores del header */
@@ -170,10 +175,12 @@ header nav img {
 /* Medium -> Width >=992px y Width < 1200px */
 @media (min-width: 992px) and (max-width: 1200px) {
   main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: 992px;
     height: 800px;
-    background-color: #F5F5F5;
+    background-color: #F3F3F3;
+  }
+  main .btn-borrar {
+    width: 100px;
   }
 }
 /* Colores del header */
@@ -181,17 +188,36 @@ header nav img {
 /* Large -> Width > 1200px */
 @media (min-width: 1200px) {
   main {
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
-    width: 1200px;
     height: 800px;
-    background-color: #F5F5F5;
+    background-color: #F3F3F3;
+  }
+  main .btn-borrar {
+    width: 100px;
   }
 }
+html {
+  font-family: Helvetica, sans-serif;
+}
+
 /* Estilos generales que afecten a todos los tamaños por igual */
 main {
-  background-color: #F5F5F5;
+  background-color: #F3F3F3;
   display: flex;
   justify-content: center;
+}
+main li {
+  list-style-type: none;
+}
+main .btn-borrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 0px;
+  background-color: #CF000F;
+  color: #F8F8F8;
 }
 main #vendedor {
   width: 100px;
@@ -200,6 +226,50 @@ main #vendedor {
 }
 main #comprador {
   width: 100%;
+  font-weight: bold;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 4.2%;
+}
+main #comprador ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+main #comprador ul li {
+  display: flex;
+  justify-content: flex-start;
+  width: 25%;
+}
+main #comprador #tableComprador {
+  width: 100%;
+}
+main #comprador #tableComprador ul li {
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+}
+main #comprador #tableComprador ul li input {
+  width: 40%;
+}
+main #comprador #btnBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+main #comprador #btnBox button {
+  border: 0px;
+  width: 180px;
+  height: 40px;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #0086bd;
+}
+main #comprador #btnBox button:hover {
+  background-color: #09b4f7;
 }
 main #manager {
   width: 100px;

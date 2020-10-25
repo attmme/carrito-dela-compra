@@ -8,7 +8,7 @@ header {
         display: flex;
 
         // Lista con los botones para cambiar de vista
-        li {
+        ul {
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
@@ -16,7 +16,7 @@ header {
             width: 100%;
             margin-bottom: 10px;
 
-            ul {
+            li {
                 button {
                     width: 120px;
                     height: 50px;
@@ -24,6 +24,7 @@ header {
                     border-radius: 1px;
                     color: $colButt;
                     background-color: $bgButtColor;
+                    font-weight: bold;
 
                     &:hover {
                         color: $bgButtColor;

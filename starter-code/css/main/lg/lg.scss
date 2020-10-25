@@ -3,12 +3,13 @@
 /* Large -> Width > 1200px */
 @media (min-width: $maxWidthMD) {
     main {
-        // CODIGO A PARTIR DE AQUI
-
-        /* Contenido visual solo para tener una referencia, se tiene que borrar */
-        width: $maxWidthMD;
         height: $heigthMain;
         background-color: $bgColMain;
+
+        // CODIGO A PARTIR DE AQUI
+        .btn-borrar {
+            width: 100px;
+        }
 
         // CODIGO HASTA AQUI
     }

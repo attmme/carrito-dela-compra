@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./css/style.css">
- 
+
 
   <title>Shopping cart</title>
 </head>
@@ -18,11 +18,11 @@
   <header>
     <nav>
       <div><img src="img/logo.png" alt="Logo"></div>
-      <li>
-        <ul><button class="btn-nav">VENDEDOR</button></ul>
-        <ul><button class="btn-nav">COMPRADOR</button></ul>
-        <ul><button class="btn-nav">MANAGER</button></ul>
-      </li>
+      <ul>
+        <li><button class="btn-nav">VENDEDOR</button></li>
+        <li><button class="btn-nav">COMPRADOR</button></li>
+        <li><button class="btn-nav">MANAGER</button></li>
+      </ul>
     </nav>
   </header>
 
@@ -34,11 +34,25 @@
 
     <!-- Vista del comprador -->
     <div id="comprador" style="display: none;">
-      <h1></h1>
+      <ul>
+        <li>PRODUCTO</li>
+        <li>PRECIO</li>
+        <li>CANTIDAD</li>
+        <li>TOTAL</li>
+        <li></li>
+      </ul>
+
+      <!-- Se irán añadiendo los productos aquí -->
       <div id="tableComprador"></div>
-      <button id="addProductsComprador" name="addProductsComprador" >Agregar producto</button>
-      <button id="calculateAll" name="calculateAll">Calcular precio</button>
-      <p id="priceAll"></p>
+
+     
+      <div id="btnBox">
+        <button id="addProductsComprador" name="addProductsComprador">Agregar producto</button>
+        <button id="calculateAll" name="calculateAll">Calcular precio</button>
+      </div>
+      <p id="priceAll">$0.00</p>
+
+
     </div>
 
     <!-- Vista del manager (ranking) -->

@@ -3,12 +3,13 @@
 /* Extra -> small (Width < 768px) */
 @media (max-width: $maxWidthXS) {
   main {
-    // CODIGO A PARTIR DE AQUI
-
-    /* Contenido visual solo para tener una referencia, se tiene que borrar */
     width: $widthXS;
     height: $heigthMain;
     background-color: $bgColMain;
+    // CODIGO A PARTIR DE AQUI
+    .btn-borrar {
+      width: 130px;
+    }
 
     // CODIGO HASTA AQUI
   }

@@ -106,6 +106,7 @@ function addRowDom(obj) {
         input4.setAttribute("type", "number");
         input4.setAttribute("max", obj.quantity);
         input4.setAttribute("min", 0);
+        input4.setAttribute("value","0");
         input4.addEventListener("keypress", (event) => {
                 event.preventDefault();
         });
@@ -117,9 +118,8 @@ function addRowDom(obj) {
 
         let li5 = document.createElement("li");
         let p5 = document.createElement("p");
-        p5.appendChild(createTextNode("$0.00"));
+        li5.innerHTML = "$0.00";
 
-        li5.appendChild(p5);
         ul.appendChild(li5);
 
         let li6 = document.createElement("li");
@@ -148,13 +148,8 @@ function deleteRow(elemt) {
 }
 
 function changePrice(elemt) {
-console.log(elemt.parentElement.parentElement.childNodes);
         let arrayLi = elemt.parentNode.parentNode.childNodes;
-        console.log(arrayLi);
-
-        console.log(arrayLi[4]);
-        console.log(arrayLi[3].childNodes[0].value);
-        console.log(arrayLi[1].childNodes[0].innerHTML);
+       
 
 
         if (arrayLi[3].childNodes[0].value == 0) {
@@ -162,7 +157,7 @@ console.log(elemt.parentElement.parentElement.childNodes);
         } else {
                 let result = arrayLi[1].childNodes[0].innerHTML * arrayLi[3].childNodes[0].value;
 
-                arrayLi[4].innerHTML = "$" + result;
+                arrayLi[4].innerHTML = "$" + result.toFixed(2);
         }
 }
 
@@ -171,13 +166,10 @@ function calculateAll(){
         let ul =  table.getElementsByTagName("ul");
         let result = 0;
         for (let i = 0; i < ul.length; i++) {
-                console.log(ul[i].getElementsByTagName("li")[4].childNodes[0]);
                 let val = ul[i].getElementsByTagName("li")[4].innerHTML.slice(1);
-                console.log(val);
-                
-                result = result + parseInt(val);
-                console.log(result + " - " + val)
+                console.log
+
+                result = result + parseFloat(val);
         }
-               console.log(table.getElementsByTagName("ul")[0].getElementsByTagName("li")[4].innerHTML);  
-        general.getElementByid("priceAll").innerHTML = "  $"+result;
+        general.getElementByid("priceAll").innerHTML = "  $"+result.toFixed(2);
 }
