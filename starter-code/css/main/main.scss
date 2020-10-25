@@ -25,9 +25,9 @@ main {
     }
 
     #vendedor {
-        width: 100px;
+        /*         width: 100px;
         height: 100px;
-        background-color: red;
+        background-color: red; */
     }
 
     #comprador {
@@ -81,12 +81,19 @@ main {
                 border-radius: 2px;
                 font-weight: bold;
                 background-color: $infBtnColor;
-                
+
                 &:hover {
                     background-color: $infBtnHover;
 
                 }
             }
+        }
+
+        // Precio total
+        #priceAll {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
         }
     }
 

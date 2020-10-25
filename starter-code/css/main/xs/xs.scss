@@ -6,11 +6,36 @@
     width: $widthXS;
     height: $heigthMain;
     background-color: $bgColMain;
+
     // CODIGO A PARTIR DE AQUI
     .btn-borrar {
-      width: 130px;
+      width: 80px;
     }
+
+    #comprador {
+      #priceAll {
+        margin-right: 150px;
+      }
+
+      #btnBox {
+
+        #addProductsComprador,
+        #calculateAll,
+        #purchase {
+          width: 130px;
+        }
+      }
+    }
+
+
+
+
+
+
 
     // CODIGO HASTA AQUI
   }
 }
+
+/* 
+ */

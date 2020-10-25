@@ -153,20 +153,23 @@ header nav img {
     height: 800px;
     background-color: #F3F3F3;
   }
+  main #comprador ul li {
+    margin-left: 10px;
+  }
   main .btn-borrar {
     width: 80px;
   }
-  main #comprador #priceAll {
+  main #priceAll {
     margin-right: 150px;
   }
-  main #comprador #btnBox #addProductsComprador,
-main #comprador #btnBox #calculateAll,
-main #comprador #btnBox #purchase {
-    width: 130px;
+  main #addProductsComprador {
+    width: 50px;
+    background-color: red;
   }
 }
 /* 
- */
+#calculateAll,
+#purchase */
 /* Colores del header */
 /* Colores del main */
 /* Small -> Width >= 768px y Width < 992px */
@@ -356,4 +359,4 @@ input {
 }
  */
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=css.map */
