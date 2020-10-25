@@ -10,7 +10,6 @@ function createTextNode(text){
 }
 
 function addQuestionRowDom(){
-        console.log("hola");
         let data = general.g_dataObjects
         let table = general.getElementByid("tableComprador");
         let tr = document.createElement("tr");
@@ -97,7 +96,9 @@ function addRowDom(obj){
         let td6 = document.createElement("td"); 
         let button6 = document.createElement("button");
         button6.appendChild(createTextNode("Delete"));
-
+        button6.addEventListener("click",function() {
+                deleteRow(this);
+        })
         td6.appendChild(button6);
         tr.appendChild(td6);
 
@@ -105,4 +106,10 @@ function addRowDom(obj){
         table.appendChild(tr);
 
 
+}
+
+
+function deleteRow(elemt){
+        //Button < Td < TR
+        elemt.parentElement.parentElement.remove()
 }
