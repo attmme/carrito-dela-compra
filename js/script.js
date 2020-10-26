@@ -1,4 +1,4 @@
-/* Recoger contenido json */
+/* Recoger contenido json (?) */
 const myRequest = new Request('../products.json');
 import * as vendedor from './vendedor.js';
 
