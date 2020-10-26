@@ -40,7 +40,7 @@ export function purchase(array) {
         for (let i = 0; i < array.length; i++) {
                 let index = g_purchases.findIndex(obj => obj.name == array[i].name);
                 if (index != -1) {
-                        g_purchases[index].quantity += array[i].quantity;
+                        g_purchases[index].quantity +=  array[i].quantity;
                 }else{
                         g_purchases.push(array[i]);
                 }

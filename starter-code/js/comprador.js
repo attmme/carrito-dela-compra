@@ -175,7 +175,7 @@ function purchase() {
                 let prod = new general.Product();
                 prod.name = ul[i].getElementsByTagName("li")[0].innerHTML;
                 prod.price = ul[i].getElementsByTagName("li")[1].innerHTML;
-                prod.quantity = ul[i].getElementsByTagName("li")[2].childNodes[0].value;
+                prod.quantity = parseInt(ul[i].getElementsByTagName("li")[2].childNodes[0].value);
                 prod.totalPrice = ul[i].getElementsByTagName("li")[3].innerHTML.slice(1);
                 arrayCart.push(prod);
                 ul[i].remove();
