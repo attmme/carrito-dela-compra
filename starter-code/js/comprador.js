@@ -7,6 +7,11 @@ addproductButton.addEventListener("click", addQuestionRowDom);
 var calculateAllButton = document.getElementById("calculateAll");
 calculateAllButton.addEventListener("click", calculateAll);
 
+var calculateAllButton = document.getElementById("purchase");
+calculateAllButton.addEventListener("click", purchase);
+
+
+
 var cart = [];
 function createTextNode(text) {
         return document.createTextNode(text);
@@ -77,41 +82,38 @@ function filterProducts(data) {
 function addRowDom(obj) {
         let table = general.getElementByid("tableComprador");
         let ul = document.createElement("ul");
+        ul.setAttribute("class","product");
 
 
         let li1 = document.createElement("li");
-        let p1 = document.createElement("p");
-        p1.appendChild(createTextNode(obj.name));
+        li1.innerHTML = obj.name;
 
-        li1.appendChild(p1);
         ul.appendChild(li1);
 
 
         let li2 = document.createElement("li");
         let p2 = document.createElement("p");
-        p2.appendChild(createTextNode(obj.price));
+        li2.innerHTML = obj.price;
 
-        li2.appendChild(p2);
         ul.appendChild(li2);
 
 
-        let li4 = document.createElement("li");
-        let input4 = document.createElement("input");
-        input4.setAttribute("type", "number");
-        input4.setAttribute("max", obj.quantity);
-        input4.setAttribute("min", 0);
-        input4.setAttribute("value","0");
-        input4.addEventListener("keypress", (event) => {
+        let li3 = document.createElement("li");
+        let input3 = document.createElement("input");
+        input3.setAttribute("type", "number");
+        input3.setAttribute("max", obj.quantity);
+        input3.setAttribute("min", 0);
+        input3.setAttribute("value","0");
+        input3.addEventListener("keypress", (event) => {
                 event.preventDefault();
         });
-        input4.addEventListener("change", function () {
+        input3.addEventListener("change", function () {
                 changePrice(this);
         })
-        li4.appendChild(input4);
-        ul.appendChild(li4);
+        li3.appendChild(input3);
+        ul.appendChild(li3);
 
         let li5 = document.createElement("li");
-        let p5 = document.createElement("p");
         li5.innerHTML = "$0.00";
 
         ul.appendChild(li5);
@@ -144,26 +146,50 @@ function deleteRow(elemt) {
 function changePrice(elemt) {
         let arrayLi = elemt.parentNode.parentNode.childNodes;
        
-
-
         if (arrayLi[2].childNodes[0].value == 0) {
                 arrayLi[3].innerHTML = "$0.00";
         } else {
-                let result = arrayLi[1].childNodes[0].innerHTML * arrayLi[2].childNodes[0].value;
-
+                let result = arrayLi[1].innerHTML * arrayLi[2].childNodes[0].value;
                 arrayLi[3].innerHTML = "$" + result.toFixed(2);
         }
 }
 
 function calculateAll(){
         let table = general.getElementByid("tableComprador");
-        let ul =  table.getElementsByTagName("ul");
+        let ul =  table.querySelectorAll("ul.product");
         let result = 0;
+
         for (let i = 0; i < ul.length; i++) {
                 let val = ul[i].getElementsByTagName("li")[3].innerHTML.slice(1);
-                console.log
-
                 result = result + parseFloat(val);
         }
         general.getElementByid("priceAll").innerHTML = "  $"+result.toFixed(2);
+}
+
+
+function purchase() {
+        let table = general.getElementByid("tableComprador");
+       
+
+        let ul =  table.querySelectorAll("ul.product");
+        let arrayCart = [];
+        for (let i = 0; i < ul.length; i++) {
+                let prod = new general.product();
+                prod.name = ul[i].getElementsByTagName("li")[0].innerHTML;
+                prod.price = ul[i].getElementsByTagName("li")[1].innerHTML;
+                prod.quantity = ul[i].getElementsByTagName("li")[2].childNodes[0].value;
+                prod.totalPrice = ul[i].getElementsByTagName("li")[3].innerHTML.slice(1);
+                arrayCart.push(prod);
+                ul[i].remove();
+        }
+        let allUl =  general.getElementByid("tableComprador").querySelectorAll("ul");
+        for (let i = 0; i < allUl.length; i++) {
+                allUl[i].remove()                
+        }
+        addproductButton.disabled = false;
+        
+        cart=[];
+        general.getElementByid("priceAll").innerHTML = "$0.00";
+        console.log(arrayCart);
+        general.purchase(arrayCart);
 }

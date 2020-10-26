@@ -18,6 +18,34 @@ function loadData() {
 }
 
 
+export class product{
+        constructor(name,price,quantity,totalPrice){
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+                this.totalPrice = totalPrice;
+        }
+
+}
+export function purchase(array) {
+        console.log(array);
+        for (let i = 0; i < g_dataObjects.length; i++) {
+                for (let x = 0; x < array.length; x++) {
+                        if (g_dataObjects[i].name == array[x].name) {
+                                console.log(g_dataObjects[i].name + "  -  " + array[x].name);
+                                console.log(g_dataObjects[i].quantity + "  -  " + array[x].quantity);
+
+                                g_dataObjects[i].quantity -= array[x].quantity
+                                console.log(g_dataObjects[i].quantity);
+
+                                break;
+                        }
+                }
+        }
+        console.log(g_dataObjects[0].name);
+        console.log(g_dataObjects[0].quantity);
+}
+
 
 export function getElementByid(id) {
         return document.getElementById(id);
