@@ -1,5 +1,5 @@
 /* Recoger contenido json */
-const myRequest = new Request('https://attmme.github.io/carrito-dela-compra/data/products.json');
+const myRequest = new Request('../products.json');
 import * as vendedor from './vendedor.js';
 
 export var g_dataObjects;
