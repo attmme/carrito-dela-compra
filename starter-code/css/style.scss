@@ -10,4 +10,8 @@ html {
   display: flex;
   justify-content: center;
   background-color: $bgColHtml;
+
+  button {
+    cursor: pointer;
+  }
 }

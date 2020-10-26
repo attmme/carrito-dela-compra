@@ -355,18 +355,33 @@ main #manager #ranking {
   display: flex;
   justify-content: center;
 }
-main #manager #ranking ol li {
-  font-size: 24px;
+main #manager #ranking ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main #manager #ranking ol li:nth-child(odd) {
+  background-color: #F6F6F6;
+}
+main #manager #ranking ol li:nth-child(even) {
+  background-color: #efefef;
+}
+main #manager #ranking ol li:first-child {
+  width: 90%;
+  border-radius: 12px;
+  font-size: 28px;
   margin-bottom: 10px;
+  background-color: #ffe14f;
 }
-main #manager #ranking ol li:nth-child(1n) {
-  background-color: yellow;
-}
-main #manager #ranking ol li:nth-child(2n) {
-  background-color: silver;
-}
-main #manager #ranking ol li:nth-child(3n) {
-  background-color: brown;
+main #manager #ranking ol li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  font-size: 22px;
 }
 
 /* Colores del header */
@@ -375,6 +390,9 @@ html {
   display: flex;
   justify-content: center;
   background-color: #F8F8F8;
+}
+html button {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

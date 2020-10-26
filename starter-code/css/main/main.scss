@@ -151,6 +151,7 @@ main {
             margin-top: 30px;
             width: 39%;
         }
+
     }
 
     #manager {
@@ -163,20 +164,44 @@ main {
             justify-content: center;
 
             ol {
-                li {
-                    font-size: 24px;
-                    margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                li:nth-child(odd) {
+                    background-color: $colRankOdd;
                 }
 
-                li:nth-child(1n) {
-                    background-color: $rankColor1;
+                li:nth-child(even) {
+                    background-color: $colRankEven;
                 }
-                li:nth-child(2n) {
-                    background-color: $rankColor2;
+
+                li:first-child {
+                    width: 90%;
+                    border-radius: 12px;
+                    font-size: 28px;
+                    margin-bottom: 10px;
+                    background-color: $colRank1;
+
                 }
-                li:nth-child(3n) {
-                    background-color: $rankColor3;
+
+                li {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 70px;
+                    width: 100%;
+                    font-size: 22px;
                 }
+
+
+
+
+
+
+
 
             }
         }

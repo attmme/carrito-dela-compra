@@ -28,7 +28,7 @@ function createList(data){
         for (let i = 0; i < data.length; i++) {
                 let li = document.createElement("li");
 
-                li.innerHTML = data[i].name + " <b style='font-weight: bold !important' >QTY:</b> "+ data[i].quantity;
+                li.innerHTML = data[i].name + " <b style='font-weight: bold !important' > &nbsp; QTY: &nbsp;</b> "+ data[i].quantity;
                 ol.appendChild(li);
         }
         div.appendChild(ol);
