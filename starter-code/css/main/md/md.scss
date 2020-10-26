@@ -1,0 +1,25 @@
+@import '../../general/colors', '../../general/sizes';
+
+/* Medium -> Width >=992px y Width < 1200px */
+@media (min-width: $maxWidthSM) and (max-width: $maxWidthMD) {
+    main {
+        width: $maxWidthSM;
+        height: $heigthMain;
+        background-color: $bgColMain;
+
+        // CODIGO A PARTIR DE AQUI
+        .btn-borrar {
+            width: 100px;
+        }
+
+        #priceAll {
+            margin-right: 341px;
+        }
+
+        #addProductsVendedor {
+            width: 100px;
+        }
+
+        // CODIGO HASTA AQUI
+    }
+}

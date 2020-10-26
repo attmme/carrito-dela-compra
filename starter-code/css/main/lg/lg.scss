@@ -1,0 +1,20 @@
+@import '../../general/colors', '../../general/sizes';
+
+/* Large -> Width > 1200px */
+@media (min-width: $maxWidthMD) {
+    main {
+        height: $heigthMain;
+        background-color: $bgColMain;
+
+        // CODIGO A PARTIR DE AQUI
+        .btn-borrar {
+            width: 100px;
+        }
+
+        #addProductsVendedor {
+            width: 100px;
+        }
+        
+        // CODIGO HASTA AQUI
+    }
+}

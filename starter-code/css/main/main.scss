@@ -1,0 +1,157 @@
+@import 'xs/xs.scss', 'sm/sm.scss', 'md/md.scss', 'lg/lg.scss', '../general/fonts';
+
+/* Estilos generales que afecten a todos los tamaños por igual */
+
+main {
+    background-color: $bgColMain;
+    display: flex;
+
+    form {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    #tableVendedor>ul {
+        display: flex;
+
+        justify-content: space-between;
+
+        li {
+
+        }
+    }
+
+
+    li {
+        list-style-type: none;
+    }
+
+    // Añadir en el js
+    .btn-borrar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: 0px;
+        background-color: $delBtnColor;
+        color: $bgColHtml;
+
+        &:hover {
+            background-color: $delBtnHover;
+        }
+    }
+
+
+    // Detalles individuales del vendedor
+    #vendedor {
+        li>input {
+            width: 62px;
+        }
+
+        form,
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            input {
+                width: 60px;
+            }
+
+            #addProductsVendedor {
+                background-color: green;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                border-radius: 6px;
+                font-weight: bold;
+                border: 0px;
+                background-color: $createlBtnColor;
+                color: $bgColHtml;
+
+                &:hover {
+                    background-color: $createBtnHover;
+                }
+            }
+        }
+    }
+
+    #comprador,
+    #vendedor {
+        width: 100%;
+        font-weight: bold;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 4.2%;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1%;
+
+            li {
+                display: flex;
+                justify-content: flex-start;
+                width: 25%;
+            }
+        }
+
+        #tableComprador {
+            width: 100%;
+
+            ul {
+                li {
+                    width: 25%;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    input {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        // Caja botones inferiores
+        #btnBox {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 100px;
+
+            button {
+                border: 0px;
+                width: 180px;
+                height: 40px;
+                border-radius: 2px;
+                font-weight: bold;
+                background-color: $infBtnColor;
+
+                &:hover {
+                    background-color: $infBtnHover;
+
+                }
+            }
+        }
+
+        // Precio total
+        #priceAll {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+    }
+
+    #manager {
+       
+    }
+}
