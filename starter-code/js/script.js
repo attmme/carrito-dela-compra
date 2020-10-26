@@ -3,6 +3,7 @@ const myRequest = new Request('../data/products.json');
 import * as vendedor from './vendedor.js';
 
 export var g_dataObjects;
+export var g_purchases=[];
 window.onload = function () {
         loadData();
 
@@ -35,6 +36,16 @@ export function changeQuantity(obj) {
         }
 }
 export function purchase(array) {
+        
+        for (let i = 0; i < array.length; i++) {
+                let index = g_purchases.findIndex(obj => obj.name == array[i].name);
+                if (index != -1) {
+                        g_purchases[index].quantity += array[i].quantity;
+                }else{
+                        g_purchases.push(array[i]);
+                }
+
+        }
         for (let i = 0; i < g_dataObjects.length; i++) {
                 for (let x = 0; x < array.length; x++) {
                         if (g_dataObjects[i].name == array[x].name) {
@@ -43,7 +54,7 @@ export function purchase(array) {
                         }
                 }
         }
-
+console.log(g_purchases);
 }
 
 
@@ -63,6 +74,7 @@ export function removeProduct(obj) {
         }
         
 }
+
 
 /* CREAR PRODUCTO -> Ver que hacer con el fichero json que ya hay productos
 
