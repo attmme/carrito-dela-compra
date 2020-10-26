@@ -92,7 +92,6 @@ function addRowDom(obj) {
 
 
         let li2 = document.createElement("li");
-        let p2 = document.createElement("p");
         li2.innerHTML = obj.price;
 
         ul.appendChild(li2);
@@ -115,7 +114,6 @@ function addRowDom(obj) {
 
         let li5 = document.createElement("li");
         li5.innerHTML = "$0.00";
-
         ul.appendChild(li5);
 
         let li6 = document.createElement("li");

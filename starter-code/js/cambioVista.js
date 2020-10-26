@@ -1,3 +1,5 @@
+import {showTable} from './vendedor.js';
+
 // Botones del header
 let btnVendedor = document.getElementsByClassName('btn-nav')[0];
 let btnComprador = document.getElementsByClassName('btn-nav')[1];
@@ -15,6 +17,8 @@ btnVendedor.addEventListener('click', () => {
         reset();
         boxVendedor.style.display = "block";
         btnVendedor.className = "apretado";
+        showTable();
+
 });
 
 btnComprador.addEventListener('click', () => {

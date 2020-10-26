@@ -1,5 +1,6 @@
 /* Recoger contenido json (?) */
 const myRequest = new Request('../data/products.json');
+import * as vendedor from './vendedor.js';
 
 export var g_dataObjects ;
 window.onload = function () {
@@ -14,6 +15,7 @@ function loadData() {
         .then(l_data => {
                 console.log(l_data[0])
                 g_dataObjects = l_data;
+                vendedor.showTable();
         });
 }
 

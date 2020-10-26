@@ -10,6 +10,12 @@
 
 
   <title>Shopping cart</title>
+
+  <script type="module" src="./js/script.js"></script>
+  <script type="module" src="./js/cambioVista.js"></script>
+  <script type="module" src="./js/comprador.js"></script>
+  <script type="module" src="./js/manager.js"></script>
+  <script type="module" src="./js/vendedor.js"></script>
 </head>
 
 <body>
@@ -29,7 +35,28 @@
   <main>
     <!-- Vista del vendedor -->
     <div id="vendedor" style="display: block;">
+      <div id="createProduct">
+        <form action="" style="display: flex;">
+          <div>
+            <label for="">Nombre producto:</label>
+            <input type="text">
+          </div>
+          <div><label for="">Cantidad</label>
+            <input type="number"></div>
 
+          <div>
+            <label for="">Price:</label>
+            <input type="number">
+          </div>
+          <button>Create Product</button>
+        </form>
+      </div>
+
+      <div id="tableVendedor"></div>
+
+      <div id="btnBox">
+        <button id="addProductsVendedor" name="addProductsVendedor">Agregar producto</button>
+      </div>
     </div>
 
     <!-- Vista del comprador -->
@@ -61,10 +88,6 @@
   </main>
 
 </body>
-<script type="module" src="./js/script.js"></script>
-<script type="module" src="./js/cambioVista.js"></script>
-<script type="module" src="./js/comprador.js"></script>
-<script type="module" src="./js/manager.js"></script>
-<script type="module" src="./js/vendedor.js"></script>
+
 
 </html>
