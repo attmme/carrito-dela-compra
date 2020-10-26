@@ -27,9 +27,8 @@ function createList(data){
         let ol = document.createElement("ol");
         for (let i = 0; i < data.length; i++) {
                 let li = document.createElement("li");
-                li.style.listStyleType = "decimal";
 
-                li.innerHTML = "Nombre producto: " +data[i].name + " Quantity: "+ data[i].quantity;
+                li.innerHTML = data[i].name + "Quantity: "+ data[i].quantity;
                 ol.appendChild(li);
         }
         div.appendChild(ol);

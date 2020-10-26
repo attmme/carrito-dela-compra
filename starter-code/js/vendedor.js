@@ -26,68 +26,6 @@ function createTextNode(text) {
         return document.createTextNode(text);
 }
 
-function addQuestionRowDom() {
-        let data = general.g_dataObjects
-        data = filterProducts(data);
-        let table = general.getElementByid("tableVendedor");
-        let ul = document.createElement("ul");
-
-
-        let li = document.createElement("li");
-        let select1 = document.createElement("select");
-        select1.addEventListener("change", function () {
-                selectProduct(this);
-        });
-
-        let option1 = document.createElement("option");
-        option1.setAttribute("disabled", true);
-
-        option1.setAttribute("Selected", true);
-        option1.appendChild(createTextNode("Productos"));
-        select1.appendChild(option1);
-        for (let x = 0; x < data.length; x++) {
-                let option1 = document.createElement("option");
-                option1.setAttribute("value", data[x].name)
-                option1.appendChild(createTextNode(data[x].name));
-                select1.appendChild(option1);
-        }
-
-        li.appendChild(select1);
-        ul.appendChild(li);
-
-
-        table.appendChild(ul);
-        addproductButton.disabled = true;
-
-}
-function selectProduct(elemt) {
-        let data = general.g_dataObjects
-        let product = data.find(obj => obj.name == elemt.value);
-        addproductButton.disabled = false;
-        cart.push(elemt.value);
-        elemt.parentElement.parentElement.remove();
-        addRowDom(product);
-
-}
-
-function filterProducts(data) {
-        let arrayFiltered = [];
-        for (let x = 0; x < data.length; x++) {
-                let flag = false;
-
-                for (let i = 0; i < cart.length; i++) {
-                        if (data[x].name == cart[i]) {
-                                flag = true;
-                        }
-                }
-                if (!flag) {
-                        arrayFiltered.push(data[x]);
-                }
-        }
-        return arrayFiltered;
-}
-
-
 function addRowDom(obj) {
         let table = general.getElementByid("tableVendedor");
         let ul = document.createElement("ul");
@@ -191,30 +129,3 @@ function createProduct(elemt) {
                 }
         }
 }
-/*
-function purchase() {
-        let table = general.getElementByid("tableComprador");
-
-
-        let ul =  table.querySelectorAll("ul.product");
-        let arrayCart = [];
-        for (let i = 0; i < ul.length; i++) {
-                let prod = new general.product();
-                prod.name = ul[i].getElementsByTagName("li")[0].innerHTML;
-                prod.price = ul[i].getElementsByTagName("li")[1].innerHTML;
-                prod.quantity = ul[i].getElementsByTagName("li")[2].childNodes[0].value;
-                prod.totalPrice = ul[i].getElementsByTagName("li")[3].innerHTML.slice(1);
-                arrayCart.push(prod);
-                ul[i].remove();
-        }
-        let allUl =  general.getElementByid("tableComprador").querySelectorAll("ul");
-        for (let i = 0; i < allUl.length; i++) {
-                allUl[i].remove()
-        }
-        addproductButton.disabled = false;
-
-        cart=[];
-        general.getElementByid("priceAll").innerHTML = "$0.00";
-        console.log(arrayCart);
-        general.purchase(arrayCart);
-}*/
