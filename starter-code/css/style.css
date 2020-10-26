@@ -352,6 +352,19 @@ main #vendedor #priceAll {
   justify-content: flex-end;
   margin-top: 30px;
 }
+main #manager {
+  width: 100%;
+  margin-top: 50px;
+}
+main #manager #ranking {
+  display: flex;
+  justify-content: center;
+}
+main #manager #ranking ol li {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 /* Colores del header */
 /* Colores del main */
 html {

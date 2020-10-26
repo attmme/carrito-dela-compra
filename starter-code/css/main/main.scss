@@ -20,9 +20,7 @@ main {
 
         justify-content: space-between;
 
-        li {
-
-        }
+        li {}
     }
 
 
@@ -152,6 +150,20 @@ main {
     }
 
     #manager {
-       
+        width: 100%;
+
+        margin-top: 50px;
+
+        #ranking {
+            display: flex;
+            justify-content: center;
+
+            ol {
+                li {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
