@@ -13,7 +13,6 @@ export function showTable() {
         }
         let data = general.g_dataObjects
     
-        console.log(data);
 
         for (let i = 0; i < data.length; i++) {
                 addRowDom(data[i]);
@@ -80,7 +79,6 @@ function addRowDom(obj) {
 
 function deleteRow(elemt) {
         //Button < li < ul
-        console.log(elemt);
         let productIndex = cart.indexOf(elemt.value);
         cart.splice(productIndex, 1);
         let arrayLi = elemt.parentNode.parentNode.childNodes;
