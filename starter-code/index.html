@@ -39,24 +39,23 @@
         <form action="" style="display: flex;">
           <div>
             <label for="">Nombre producto:</label>
-            <input type="text">
+            <input id="nameProduct" type="text">
           </div>
           <div><label for="">Cantidad</label>
-            <input type="number"></div>
+            <input id="quantityProduct" type="number" min="0" value="0"></div>
 
           <div>
             <label for="">Price:</label>
-            <input type="number">
+            <input id="priceProduct" type="number" min="1" value="0">
           </div>
-          <button>Create Product</button>
-        </form>
+          <div id="btnBox">
+            <button  type="button" id="addProductsVendedor" name="addProductsVendedor">Create Product</button>
+          </div>        </form>
       </div>
 
       <div id="tableVendedor"></div>
 
-      <div id="btnBox">
-        <button id="addProductsVendedor" name="addProductsVendedor">Agregar producto</button>
-      </div>
+     
     </div>
 
     <!-- Vista del comprador -->
