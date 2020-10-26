@@ -2,26 +2,24 @@
 const myRequest = new Request('../data/products.json');
 import * as vendedor from './vendedor.js';
 
-export var g_dataObjects ;
+export var g_dataObjects;
 window.onload = function () {
-        //console.log("1");
         loadData();
-                
+
 }
 
 function loadData() {
         fetch(myRequest)
-        .then(response => response.json())
-        .then(l_data => {
-                console.log(l_data[0])
-                g_dataObjects = l_data;
-                vendedor.showTable();
-        });
+                .then(response => response.json())
+                .then(l_data => {
+                        g_dataObjects = l_data;
+                        vendedor.showTable();
+                });
 }
 
 
-export class product{
-        constructor(name,price,quantity,totalPrice){
+export class Product {
+        constructor(name, price, quantity, totalPrice) {
                 this.name = name;
                 this.price = price;
                 this.quantity = quantity;
@@ -29,28 +27,40 @@ export class product{
         }
 
 }
+export function changeQuantity(obj) {
+        for (let i = 0; i < g_dataObjects.length; i++) {
+                if (g_dataObjects[i].name == obj.name) {
+                        g_dataObjects[i].quantity = obj.quantity;
+                }
+        }
+}
 export function purchase(array) {
-        console.log(array);
         for (let i = 0; i < g_dataObjects.length; i++) {
                 for (let x = 0; x < array.length; x++) {
                         if (g_dataObjects[i].name == array[x].name) {
-                                console.log(g_dataObjects[i].name + "  -  " + array[x].name);
-                                console.log(g_dataObjects[i].quantity + "  -  " + array[x].quantity);
-
                                 g_dataObjects[i].quantity -= array[x].quantity
-                                console.log(g_dataObjects[i].quantity);
-
                                 break;
                         }
                 }
         }
-        console.log(g_dataObjects[0].name);
-        console.log(g_dataObjects[0].quantity);
+
 }
 
 
 export function getElementByid(id) {
         return document.getElementById(id);
+
+}
+
+export function createProduct(obj) {
+        g_dataObjects.push(obj);
+}
+export function removeProduct(obj) {
+        for (let i = 0; i < g_dataObjects.length; i++) {
+                if (g_dataObjects[i].name == obj.name) {
+                        g_dataObjects.splice(i,1);
+                }
+        }
         
 }
 
@@ -68,9 +78,9 @@ producto = [{
 
 Después ejecuta la función de visualizar producto para actualizar.
 */
-const createProduct = (n, p, s) => {
+/*const createProduct = (n, p, s) => {
 
-}
+}*/
 
 
 /* BORRAR PRODUCTO -> Ver que hacer con el fichero json que ya hay productos
@@ -108,9 +118,9 @@ const addProduct = () => {
             Por definir
 
 */
-const removeProduct = () => {
+/*const removeProduct = () => {
 
-}
+}*/
 
 
 /* VISUALIZAR CARRITO

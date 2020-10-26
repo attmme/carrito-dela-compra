@@ -172,7 +172,7 @@ function purchase() {
         let ul =  table.querySelectorAll("ul.product");
         let arrayCart = [];
         for (let i = 0; i < ul.length; i++) {
-                let prod = new general.product();
+                let prod = new general.Product();
                 prod.name = ul[i].getElementsByTagName("li")[0].innerHTML;
                 prod.price = ul[i].getElementsByTagName("li")[1].innerHTML;
                 prod.quantity = ul[i].getElementsByTagName("li")[2].childNodes[0].value;
@@ -188,6 +188,14 @@ function purchase() {
         
         cart=[];
         general.getElementByid("priceAll").innerHTML = "$0.00";
-        console.log(arrayCart);
         general.purchase(arrayCart);
+}
+export function resetComprador() {
+        let table = general.getElementByid("tableComprador");
+        table.innerHTML = "";
+        general.getElementByid("addProductsComprador").disabled = false;
+        general.getElementByid("priceAll").innerHTML = "$0.00";
+        cart= [];
+
+
 }

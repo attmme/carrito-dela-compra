@@ -1,33 +1,16 @@
-
-/*
-var g_dataObjects ;
-window.onload = function () {
-
-        loadData();
-        
-}
-
-function loadData() {
-        fetch(myRequest)
-        .then(response => response.json())
-        .then(l_data => {
-                console.log(l_data)
-                g_dataObjects = l_data;
-        });
-}*/
-
 import * as general from './script.js';
 
 
 
-console.log("hola")
+document.getElementById("addProductsVendedor").addEventListener("click", function () {
+        createProduct(this);
+});
 
 export function showTable() {
-        let allUl =  general.getElementByid("tableVendedor").querySelectorAll("ul");
+        let allUl = general.getElementByid("tableVendedor").querySelectorAll("ul");
         for (let i = 0; i < allUl.length; i++) {
-                allUl[i].remove()                
+                allUl[i].remove()
         }
-        console.log("gola");
         let data = general.g_dataObjects
         for (let i = 0; i < data.length; i++) {
                 addRowDom(data[i]);
@@ -87,16 +70,16 @@ function selectProduct(elemt) {
 function filterProducts(data) {
         let arrayFiltered = [];
         for (let x = 0; x < data.length; x++) {
-                let flag = false;    
+                let flag = false;
 
                 for (let i = 0; i < cart.length; i++) {
-                        if (data[x].name==cart[i]) {
-                            flag = true;    
-                        }                        
+                        if (data[x].name == cart[i]) {
+                                flag = true;
+                        }
                 }
-                if(!flag){
+                if (!flag) {
                         arrayFiltered.push(data[x]);
-                }          
+                }
         }
         return arrayFiltered;
 }
@@ -105,7 +88,7 @@ function filterProducts(data) {
 function addRowDom(obj) {
         let table = general.getElementByid("tableVendedor");
         let ul = document.createElement("ul");
-        ul.setAttribute("class","product");
+        ul.setAttribute("class", "product");
 
 
         let li1 = document.createElement("li");
@@ -115,7 +98,7 @@ function addRowDom(obj) {
 
 
         let li2 = document.createElement("li");
-        li2.innerHTML = obj.price;
+        li2.innerHTML = "$" + obj.price;
 
         ul.appendChild(li2);
 
@@ -123,25 +106,24 @@ function addRowDom(obj) {
         let li3 = document.createElement("li");
         let input3 = document.createElement("input");
         input3.setAttribute("type", "number");
-        input3.setAttribute("max", obj.quantity);
         input3.setAttribute("min", 0);
-        input3.setAttribute("value",obj.quantity);
+        input3.setAttribute("value", obj.quantity);
         input3.addEventListener("keypress", (event) => {
                 event.preventDefault();
         });
         input3.addEventListener("change", function () {
-                changePrice(this);
+                changeQuantity(this);
         })
         li3.appendChild(input3);
         ul.appendChild(li3);
 
-       
+
 
         let li6 = document.createElement("li");
         let button6 = document.createElement("button");
         button6.appendChild(createTextNode("Delete"));
-        button6.setAttribute("value",obj.name);
-        button6.setAttribute("class","btn-borrar");
+        button6.setAttribute("value", obj.name);
+        button6.setAttribute("class", "btn-borrar");
         button6.addEventListener("click", function () {
                 deleteRow(this);
         })
@@ -156,27 +138,60 @@ function addRowDom(obj) {
 
 
 function deleteRow(elemt) {
-        //Button < Td < TR
+        //Button < li < ul
+        console.log(elemt);
         let productIndex = cart.indexOf(elemt.value);
-        cart.splice(productIndex,1);
+        cart.splice(productIndex, 1);
+        let arrayLi = elemt.parentNode.parentNode.childNodes;
+        let product = createObj(arrayLi);
+        general.removeProduct(product);
         elemt.parentElement.parentElement.remove()
 }
 
-function changePrice(elemt) {
+function changeQuantity(elemt) {
         let arrayLi = elemt.parentNode.parentNode.childNodes;
-       
-        if (arrayLi[2].childNodes[0].value == 0) {
-                arrayLi[3].innerHTML = "$0.00";
-        } else {
-                let result = arrayLi[1].innerHTML * arrayLi[2].childNodes[0].value;
-                arrayLi[3].innerHTML = "$" + result.toFixed(2);
-        }
+        let product = createObj(arrayLi);
+        general.changeQuantity(product);
+
+
 }
 
+function createObj(arrayLi) {
+        let prod = new general.Product();
+
+        prod.name = arrayLi[0].innerHTML;
+        prod.price = arrayLi[1].innerHTML.slice(1);
+        prod.quantity = arrayLi[2].childNodes[0].value;
+        return prod;
+}
+
+function createProduct(elemt) {
+        let name = general.getElementByid("nameProduct");
+        let price = general.getElementByid("priceProduct");
+        let quantity = general.getElementByid("quantityProduct");
+        let data = general.g_dataObjects;
+        let flag = false;
+        for (let i = 0; i < data.length; i++) {
+                if (data[i].name == name.value) {
+                        flag = true;
+                        break;
+                }
+        }
+        if (!flag) {
+                if (name.value.trim() != "" && price.value > 0 && quantity.value >= 0) {
+                        let prod = new general.Product(name.value, price.value, quantity.value);
+                        general.createProduct(prod);
+                        showTable();
+                        name.value = "";
+                        price.value = 0;
+                        quantity.value = 0;
+                }
+        }
+}
 /*
 function purchase() {
         let table = general.getElementByid("tableComprador");
-       
+
 
         let ul =  table.querySelectorAll("ul.product");
         let arrayCart = [];
@@ -191,10 +206,10 @@ function purchase() {
         }
         let allUl =  general.getElementByid("tableComprador").querySelectorAll("ul");
         for (let i = 0; i < allUl.length; i++) {
-                allUl[i].remove()                
+                allUl[i].remove()
         }
         addproductButton.disabled = false;
-        
+
         cart=[];
         general.getElementByid("priceAll").innerHTML = "$0.00";
         console.log(arrayCart);
