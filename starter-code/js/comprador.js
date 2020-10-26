@@ -146,12 +146,12 @@ function changePrice(elemt) {
        
 
 
-        if (arrayLi[3].childNodes[0].value == 0) {
-                arrayLi[4].innerHTML = "$0.00";
+        if (arrayLi[2].childNodes[0].value == 0) {
+                arrayLi[3].innerHTML = "$0.00";
         } else {
-                let result = arrayLi[1].childNodes[0].innerHTML * arrayLi[3].childNodes[0].value;
+                let result = arrayLi[1].childNodes[0].innerHTML * arrayLi[2].childNodes[0].value;
 
-                arrayLi[4].innerHTML = "$" + result.toFixed(2);
+                arrayLi[3].innerHTML = "$" + result.toFixed(2);
         }
 }
 
@@ -160,7 +160,7 @@ function calculateAll(){
         let ul =  table.getElementsByTagName("ul");
         let result = 0;
         for (let i = 0; i < ul.length; i++) {
-                let val = ul[i].getElementsByTagName("li")[4].innerHTML.slice(1);
+                let val = ul[i].getElementsByTagName("li")[3].innerHTML.slice(1);
                 console.log
 
                 result = result + parseFloat(val);
