@@ -16,6 +16,27 @@
             margin-right: 341px;
         }
 
+        #vendedor {
+            #btn-create {
+                width: 100px;
+            }
+
+            form {
+                display: flex;
+
+                div {
+                    margin-right: 13.2vh;
+                }
+
+                div:nth-child(3n) {
+                    margin-right: 15.1vh;
+                    margin-left: -1vh;
+                } 
+
+                margin-bottom: 20px;
+            }
+        }
+
         // CODIGO HASTA AQUI
     }
 }

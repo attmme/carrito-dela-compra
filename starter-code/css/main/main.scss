@@ -22,15 +22,46 @@ main {
         border: 0px;
         background-color: $delBtnColor;
         color: $bgColHtml;
+
+        &:hover {
+            background-color: $delBtnHover;
+        }
     }
 
+
+
+    // Detalles individuales del vendedor
     #vendedor {
-        /*         width: 100px;
-        height: 100px;
-        background-color: red; */
+
+        form {
+            display: flex;
+            margin-bottom: 20px;
+
+            input {
+                width: 60px;
+            }
+
+            #btn-create {
+                background-color: green;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                border-radius: 6px;
+                font-weight: bold;
+                border: 0px;
+                background-color: $createlBtnColor;
+                color: $bgColHtml;
+
+                &:hover {
+                    background-color: $createBtnHover;
+                }
+            }
+        }
     }
 
-    #comprador {
+    #comprador,
+    #vendedor {
         width: 100%;
         font-weight: bold;
         margin-left: 2%;
