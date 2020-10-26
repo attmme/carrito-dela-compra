@@ -1,6 +1,7 @@
 import {showTable} from './vendedor.js';
 import * as general from './script.js';
 import * as comprador from './comprador.js';
+import * as manager from './manager.js';
 
 
 // Botones del header
@@ -35,6 +36,7 @@ btnComprador.addEventListener('click', () => {
 btnManager.addEventListener('click', () => {
         reset();
         resetComprador();
+        manager.orderData();
         boxManager.style.display = "block";
         btnManager.className = "apretado";
 });
