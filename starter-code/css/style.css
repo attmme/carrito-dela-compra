@@ -156,6 +156,9 @@ header nav img {
   main .btn-borrar {
     width: 80px;
   }
+  main #addProductsVendedor {
+    width: 80px;
+  }
   main #comprador #priceAll {
     margin-right: 150px;
   }
@@ -182,6 +185,9 @@ main #comprador #btnBox #purchase {
   main #priceAll {
     margin-right: 254px;
   }
+  main #addProductsVendedor {
+    width: 100px;
+  }
 }
 /* Colores del header */
 /* Colores del main */
@@ -198,6 +204,9 @@ main #comprador #btnBox #purchase {
   main #priceAll {
     margin-right: 341px;
   }
+  main #addProductsVendedor {
+    width: 100px;
+  }
 }
 /* Colores del header */
 /* Colores del main */
@@ -210,8 +219,8 @@ main #comprador #btnBox #purchase {
   main .btn-borrar {
     width: 100px;
   }
-  main #priceAll {
-    margin-right: 420px;
+  main #addProductsVendedor {
+    width: 100px;
   }
 }
 html {
@@ -222,7 +231,17 @@ html {
 main {
   background-color: #F3F3F3;
   display: flex;
-  justify-content: center;
+}
+main form {
+  display: flex;
+  justify-content: space-between;
+}
+main form div {
+  width: 100%;
+}
+main #tableVendedor > ul {
+  display: flex;
+  justify-content: space-between;
 }
 main li {
   list-style-type: none;
@@ -238,48 +257,84 @@ main .btn-borrar {
   background-color: #CF000F;
   color: #F8F8F8;
 }
-main #vendedor {
-  /*         width: 100px;
-  height: 100px;
-  background-color: red; */
+main .btn-borrar:hover {
+  background-color: #fc0213;
 }
-main #comprador {
+main #vendedor li > input {
+  width: 62px;
+}
+main #vendedor form,
+main #vendedor ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main #vendedor form input,
+main #vendedor ul input {
+  width: 60px;
+}
+main #vendedor form #addProductsVendedor,
+main #vendedor ul #addProductsVendedor {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 0px;
+  background-color: #008000;
+  color: #F8F8F8;
+}
+main #vendedor form #addProductsVendedor:hover,
+main #vendedor ul #addProductsVendedor:hover {
+  background-color: #06a306;
+}
+main #comprador,
+main #vendedor {
   width: 100%;
   font-weight: bold;
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 4.2%;
 }
-main #comprador ul {
+main #comprador ul,
+main #vendedor ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1%;
 }
-main #comprador ul li {
+main #comprador ul li,
+main #vendedor ul li {
   display: flex;
   justify-content: flex-start;
   width: 25%;
 }
-main #comprador #tableComprador {
+main #comprador #tableComprador,
+main #vendedor #tableComprador {
   width: 100%;
 }
-main #comprador #tableComprador ul li {
+main #comprador #tableComprador ul li,
+main #vendedor #tableComprador ul li {
   width: 25%;
   display: flex;
   justify-content: flex-start;
 }
-main #comprador #tableComprador ul li input {
+main #comprador #tableComprador ul li input,
+main #vendedor #tableComprador ul li input {
   width: 40%;
 }
-main #comprador #btnBox {
+main #comprador #btnBox,
+main #vendedor #btnBox {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 100px;
 }
-main #comprador #btnBox button {
+main #comprador #btnBox button,
+main #vendedor #btnBox button {
   border: 0px;
   width: 180px;
   height: 40px;
@@ -287,10 +342,12 @@ main #comprador #btnBox button {
   font-weight: bold;
   background-color: #0086bd;
 }
-main #comprador #btnBox button:hover {
+main #comprador #btnBox button:hover,
+main #vendedor #btnBox button:hover {
   background-color: #09b4f7;
 }
-main #comprador #priceAll {
+main #comprador #priceAll,
+main #vendedor #priceAll {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
@@ -308,52 +365,5 @@ html {
   justify-content: center;
   background-color: #F8F8F8;
 }
-
-/*  Estilos que ya venian, revisar que nos sirve
-    borrar al terminar la web
-
-input {
-  border: solid 1px black;
-}
-
-
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-
-.btn-success {
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-}
-
-.btn-delete {
-    color: #fff;
-    background-color: #CF000F;
-    border-color: #CF000F;
-}
-
-.quantity {
-  margin: 0 5px;
-}
- */
 
 /*# sourceMappingURL=style.css.map */

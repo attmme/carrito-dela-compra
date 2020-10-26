@@ -36,26 +36,31 @@
     <!-- Vista del vendedor -->
     <div id="vendedor" style="display: block;">
       <div id="createProduct">
-        <form action="" style="display: flex;">
-          <div>
-            <label for="">Nombre producto:</label>
-            <input id="nameProduct" type="text">
-          </div>
-          <div><label for="">Cantidad</label>
-            <input id="quantityProduct" type="number" min="0" value="0"></div>
+        <form action="">
 
           <div>
-            <label for="">Price:</label>
-            <input id="priceProduct" type="number" min="1" value="0">
+            <label for="">Nombre</label>
+            <input type="text">
           </div>
-          <div id="btnBox">
-            <button  type="button" id="addProductsVendedor" name="addProductsVendedor">Create Product</button>
-          </div>        </form>
+
+          <div>
+            <label for="">Precio</label>
+            <input type="number">
+          </div>
+
+          <div>
+            <label for="">Cantidad</label>
+            <input type="number">
+          </div>
+          <div>
+            <button id="addProductsVendedor" name="addProductsVendedor">Create</button>
+          </div>
+        </form>
       </div>
 
       <div id="tableVendedor"></div>
 
-     
+
     </div>
 
     <!-- Vista del comprador -->
