@@ -160,7 +160,7 @@ header nav img {
     width: 80px;
   }
   main #comprador #priceAll {
-    margin-right: 150px;
+    margin-left: 5px;
   }
   main #comprador #btnBox #addProductsComprador,
 main #comprador #btnBox #calculateAll,
@@ -168,8 +168,6 @@ main #comprador #btnBox #purchase {
     width: 130px;
   }
 }
-/* 
- */
 /* Colores del header */
 /* Colores del main */
 /* Small -> Width >= 768px y Width < 992px */
@@ -181,9 +179,6 @@ main #comprador #btnBox #purchase {
   }
   main .btn-borrar {
     width: 100px;
-  }
-  main #priceAll {
-    margin-right: 254px;
   }
   main #addProductsVendedor {
     width: 100px;
@@ -200,9 +195,6 @@ main #comprador #btnBox #purchase {
   }
   main .btn-borrar {
     width: 100px;
-  }
-  main #priceAll {
-    margin-right: 341px;
   }
   main #addProductsVendedor {
     width: 100px;
@@ -349,8 +341,11 @@ main #vendedor #btnBox button:hover {
 main #comprador #priceAll,
 main #vendedor #priceAll {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-right: 5px;
+  float: right;
   margin-top: 30px;
+  width: 39%;
 }
 main #manager {
   width: 100%;
@@ -363,6 +358,16 @@ main #manager #ranking {
 main #manager #ranking ol li {
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+main #manager #ranking ol li:nth-child(1n) {
+  background-color: yellow;
+}
+main #manager #ranking ol li:nth-child(2n) {
+  background-color: silver;
+}
+main #manager #ranking ol li:nth-child(3n) {
+  background-color: brown;
 }
 
 /* Colores del header */
